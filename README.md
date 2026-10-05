@@ -1,4 +1,4 @@
-# gbsp — a Source engine map compiler in Rust
+# gbsp - a Source engine map compiler in Rust
 
 Compiles Hammer `.vmf` maps into Source engine BSP V20
 with three tools that mirror Valve's pipeline:
@@ -8,10 +8,6 @@ with three tools that mirror Valve's pipeline:
 | `gbsp` | vbsp | `crates/gold-bsp` | VMF -> BSP: brushes, BSP tree, portals, faces, detail, displacements, water, areaportals, overlays and water transition overlays, occluders, cubemap patches, static props, detail props (grass sprites), physics collision incl. precomputed displacement hulls |
 | `gvis` | vvis | `crates/gold-vis` | portal-flow PVS/PAS, sky leaf flags, leaf→water distances |
 | `grad` | vrad | `crates/gold-rad` | lightmaps (LDR + HDR, bumped), switchable light styles, texture lights (`lights.rad`), radiosity bounces, leaf ambient cubes, world lights, static prop vertex lighting, detail prop lighting, vertex normals |
-
-`crates/gold-common` holds the shared pieces: BSP format, VMF/KeyValues parsing,
-VPK/gameinfo filesystem, material and texture metadata, IVP physics collision
-format, polygon math.
 
 ## Usage
 
@@ -35,3 +31,6 @@ target/release/grad sdk_vehicles
 install locations (Source SDK Base 2013 Singleplayer, then Half-Life 2).
 
 A leaking map writes `<map>.lin` (leak path points) and compiles without filling the outside.
+
+## Known bugs
+* Some meshes are not lit properly, causing props to receive incorrect lighting.
