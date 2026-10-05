@@ -1,0 +1,9 @@
+[package]
+name = "gold-bsp"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+bytemuck.workspace = true
+rayon.workspace = true
+gold-common.workspace = true

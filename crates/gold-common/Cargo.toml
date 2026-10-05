@@ -1,0 +1,8 @@
+[package]
+name = "gold-common"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+bytemuck.workspace = true
+rayon.workspace = true
